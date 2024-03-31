@@ -1,11 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import GlobalLayout from '../components/GlobalLayout';
+import {COLORS} from '../theme';
 
 export default function OrderHistory() {
   return (
-    <View>
-      <Text>OrderHistory</Text>
-    </View>
+    <GlobalLayout>
+      <Text style={{color: COLORS.primaryWhiteHex}}>Order History Screen</Text>
+    </GlobalLayout>
   );
 }
 
