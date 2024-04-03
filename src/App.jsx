@@ -15,7 +15,7 @@ export default function App() {
       <StatusBar
         translucent
         barStyle={'light-content'}
-        backgroundColor={COLORS.primaryOrangeHex}
+        backgroundColor={COLORS.primaryBlackHex}
       />
       <RootNavigation />
     </>

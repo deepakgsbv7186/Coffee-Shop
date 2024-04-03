@@ -18,7 +18,7 @@ import CoffeeData from '../data/CoffeeData';
 import CoffeeCard from '../components/CoffeeCard';
 import BeansData from '../data/BeansData';
 
-export default function Home() {
+export default function Home({navigation}) {
   const [coffeeList, setCoffeeList] = useState(CoffeeData);
   const [BeanList, setBeanList] = useState(BeansData);
   return (
@@ -52,7 +52,11 @@ export default function Home() {
           contentContainerStyle={styles.flatListContainer}
           keyExtractor={item => item.id}
           renderItem={({item}) => (
-            <TouchableOpacity activeOpacity={1}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.push('Details', {item: item, type: item.type});
+              }}
+              activeOpacity={1}>
               <CoffeeCard data={item} />
             </TouchableOpacity>
           )}

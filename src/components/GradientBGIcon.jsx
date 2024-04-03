@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {BORDERRADIUS, COLORS, SPACING} from '../theme';
@@ -10,7 +10,7 @@ export default function GradientBGIcon({name, color, size}) {
       <LinearGradient
         start={{x: 0, y: 0}}
         end={{x: 1, y: 1}}
-        colors={[COLORS.primaryGreyHex, COLORS.primaryBlackHex]}
+        colors={[COLORS.primaryLightGreyHex, COLORS.primaryDarkGreyHex]}
         style={styles.gradientContainer}>
         <CustomIcon name={name} color={color} size={size} />
       </LinearGradient>
@@ -20,16 +20,13 @@ export default function GradientBGIcon({name, color, size}) {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 2,
-    borderColor: COLORS.primaryLightGreyHex,
     borderRadius: BORDERRADIUS.radius_10,
-    backgroundColor: COLORS.primaryDarkGreyHex,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
   },
   gradientContainer: {
-    padding: SPACING.space_12 / 2,
+    padding: SPACING.space_16 / 2,
     justifyContent: 'center',
     alignItems: 'center',
   },

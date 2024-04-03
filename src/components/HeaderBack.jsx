@@ -2,8 +2,10 @@ import {Pressable, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import GradientBGIcon from './GradientBGIcon';
 import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme';
+import {useNavigation} from '@react-navigation/native';
 
-export default function HeaderBack({title, navigation, onPressFavourite}) {
+export default function HeaderBack({title, onPressFavourite}) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Pressable onPress={() => navigation.goBack()}>
