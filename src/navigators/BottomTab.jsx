@@ -28,7 +28,7 @@ export default function BottomTab() {
         tabBarBackground: () => (
           <BlurView
             overlayColor=""
-            blurAmount={15}
+            blurAmount={5}
             style={{
               position: 'absolute',
               top: 0,
